@@ -1,0 +1,345 @@
+;------------------------------------------------------------------------
+; btcusb.inf
+; IVT Corporation Bluetooth USB Device Installation Script
+; For Windows98SE/ME/2000/XP
+;
+; Copyright (c) 2000-2004, IVT Corporation.
+; http://www.ivtcorporation.com
+; http://www.bluesoleil.com
+;
+;------------------------------------------------------------------------
+
+[Version]
+signature="$CHICAGO$"
+Class=Bluetooth
+ClassGUID={F12D3CF8-B11D-457e-8641-BE2AF2D6D204}
+Provider=%ProviderName%
+DriverVer=07/08/2004,2.0.10
+CatalogFile=btcusb.cat
+
+[SourceDisksNames]
+1 = %SourceDisk%,,,
+
+[SourceDisksFiles]
+btcusb.sys = 1
+btinstall.dll = 1
+
+[ClassInstall32]
+AddReg=BSOL.NT.AddReg
+CopyFiles=BSOL.NT.CopyFiles
+
+[BSOL.NT.AddReg]
+HKR,,,0,%BTUSBClassName%
+HKR,,Icon,,100
+HKR,,Installer32,,"btinstall.dll,BTUSBInstaller"
+HKR,,SilentInstall,,1
+HKR,,NoInstallClass,,1
+;HKR,,NoDisplayClass,,1
+
+[BSOL.NT.CopyFiles]
+;btinstall.dll
+
+[ControlFlags]
+ExcludeFromSelect= USB\VID_0A12&PID_0001
+ExcludeFromSelect= USB\VID_0A12&PID_ffff 
+ExcludeFromSelect= USB\VID_4851&PID_1103
+ExcludeFromSelect= USB\VID_044E&PID_3001
+ExcludeFromSelect= USB\VID_044e&PID_ffff
+ExcludeFromSelect= USB\VID_0442&PID_ABBA
+ExcludeFromSelect= USB\VID_08EA&PID_ABBA
+ExcludeFromSelect= USB\VID_08EA&PID_ABBB
+ExcludeFromSelect= USB\VID_0400&PID_0807
+ExcludeFromSelect= USB\VID_0400&PID_080A
+ExcludeFromSelect= USB\VID_0D9A&PID_0001
+ExcludeFromSelect= USB\VID_0A5C&PID_201D
+ExcludeFromSelect= USB\VID_0A5C&PID_2039
+ExcludeFromSelect= USB\VID_0525&PID_A220
+ExcludeFromSelect= USB\VID_0525&PID_100D
+ExcludeFromSelect= USB\VID_0c10&PID_0000
+ExcludeFromSelect= USB\VID_1582&PID_3001
+ExcludeFromSelect= USB\VID_0B7A&PID_07D0
+ExcludeFromSelect= USB\VID_0BDB&PID_1000
+ExcludeFromSelect= USB\VID_0BDB&PID_1002
+ExcludeFromSelect= USB\VID_0471&PID_0809
+ExcludeFromSelect= USB\VID_0547&PID_7777
+ExcludeFromSelect= USB\VID_0F57&PID_1002
+ExcludeFromSelect= USB\VID_0A5C&PID_200A
+ExcludeFromSelect= USB\VID_03EE&PID_641F
+ExcludeFromSelect= USB\VID_03EE&PID_6438
+ExcludeFromSelect= USB\VID_04D7&PID_1BE4
+ExcludeFromSelect= USB\VID_070A&PID_4002
+ExcludeFromSelect= USB\VID_070A&PID_4003
+ExcludeFromSelect= USB\VID_055D&PID_0BB1
+ExcludeFromSelect= USB\VID_0451&PID_1234
+ExcludeFromSelect= USB\VID_0451&PID_ffff
+ExcludeFromSelect= USB\VID_0E39&PID_0137
+ExcludeFromSelect= USB\VID_08fd&PID_0001
+ExcludeFromSelect= USB\VID_0930&PID_0502
+ExcludeFromSelect= USB\VID_0483&PID_5000
+;ExcludeFromSelect= USB\VID_0483&PID_5001
+ExcludeFromSelect= USB\VID_04BF&PID_030A
+ExcludeFromSelect= USB\VID_04BF&PID_030C
+ExcludeFromSelect= USB\VID_04BF&PID_0310
+ExcludeFromSelect= USB\VID_04BF&PID_0311
+ExcludeFromSelect= USB\VID_04BF&PID_0317
+ExcludeFromSelect= USB\VID_04BF&PID_0318
+ExcludeFromSelect= USB\VID_1668&PID_0441
+ExcludeFromSelect= USB\VID_1668&PID_1441
+ExcludeFromSelect= USB\VID_045E&PID_007E
+ExcludeFromSelect= USB\VID_04BF&PID_0309
+ExcludeFromSelect= USB\VID_04BF&PID_0319
+ExcludeFromSelect= USB\VID_04BF&PID_0320
+ExcludeFromSelect= USB\VID_04BF&PID_030B
+ExcludeFromSelect= USB\VID_0506&PID_00A0
+ExcludeFromSelect= USB\VID_0B62&PID_000B
+ExcludeFromSelect= USB\VID_0609&PID_FF12
+ExcludeFromSelect= USB\VID_0F4D&PID_1000
+ExcludeFromSelect= USB\VID_0471&PID_1201
+ExcludeFromSelect= USB\VID_0858&PID_3102
+ExcludeFromSelect= USB\VID_1076&PID_0031
+ExcludeFromSelect= USB\VID_1076&PID_0032
+ExcludeFromSelect= USB\VID_413C&PID_8000
+ExcludeFromSelect= USB\VID_413C&PID_8010
+ExcludeFromSelect= USB\VID_049F&PID_0027 
+ExcludeFromSelect= USB\VID_049F&PID_0036
+ExcludeFromSelect= USB\VID_0DB0&PID_1967 
+ExcludeFromSelect= USB\VID_0DB0&PID_ffff 
+ExcludeFromSelect= USB\VID_0DB0&PID_6855 
+ExcludeFromSelect= USB\VID_0DB0&PID_6970 
+ExcludeFromSelect= USB\VID_0DB0&PID_697A 
+ExcludeFromSelect= USB\VID_044e&PID_2014
+ExcludeFromSelect= USB\VID_1046&PID_8901
+ExcludeFromSelect= USB\VID_1131&PID_1001
+ExcludeFromSelect= USB\VID_050D&PID_0081
+ExcludeFromSelect= USB\VID_050d&PID_0084
+ExcludeFromSelect= USB\VID_1310&PID_0001
+ExcludeFromSelect= USB\VID_049F&PID_0086
+ExcludeFromSelect= USB\VID_13DD&PID_0001
+ExcludeFromSelect= USB\VID_2299&PID_4533
+ExcludeFromSelect= USB\VID_1733&PID_1000
+
+ExcludeFromSelect = USB\VID_046D&PID_C707
+ExcludeFromSelect = USB\VID_046D&PID_C708
+ExcludeFromSelect = USB\VID_046D&PID_C709
+ExcludeFromSelect = USB\VID_1668&PID_2441
+ExcludeFromSelect = USB\VID_0FD1&PID_0001
+ExcludeFromSelect = USB\VID_050D&PID_0083
+ExcludeFromSelect = USB\VID_04AD&PID_2501
+ExcludeFromSelect = USB\VID_0547&PID_0001
+ExcludeFromSelect = USB\VID_11D9&PID_2600
+ExcludeFromSelect = USB\VID_413C&PID_8501
+ExcludeFromSelect = USB\VID_0BF8&PID_1003
+ExcludeFromSelect = USB\VID_083A&PID_BB01
+ExcludeFromSelect = USB\VID_07B8&PID_B02A
+ExcludeFromSelect = USB\VID_117F&PID_3101
+ExcludeFromSelect = USB\VID_1457&PID_5202
+ExcludeFromSelect = USB\VID_0DB0&PID_A970
+ExcludeFromSelect = USB\VID_0DB0&PID_A97A
+ExcludeFromSelect = USB\VID_0DB0&PID_B970
+ExcludeFromSelect = USB\VID_0DB0&PID_B97A
+ExcludeFromSelect = USB\VID_1668&PID_2441
+ExcludeFromSelect = USB\VID_5994&PID_2005
+ExcludeFromSelect = USB\VID_1131&PID_1003
+
+[Manufacturer]
+%IVT%=IVT
+
+[IVT]
+%CSR.DeviceDesc%=Btusb_DDI, USB\VID_0A12&PID_0001
+%CSR.DeviceDesc%=Btusb_DDI, USB\VID_0A12&PID_ffff 
+%CSR.DeviceDesc%=Btusb_DDI, USB\VID_4851&PID_1103 
+%ALPS.DeviceDesc%=Btusb_DDI, USB\VID_044E&PID_3001
+%ALPS.DeviceDesc%=Btusb_DDI, USB\VID_044e&PID_ffff
+%ERICSSON.DeviceDesc%=Btusb_DDI, USB\VID_0442&PID_ABBA
+%ERICSSON.DeviceDesc%=Btusb_DDI, USB\VID_08EA&PID_ABBA
+%ERICSSON.DeviceDesc%=Btusb_DDI, USB\VID_08EA&PID_ABBB
+%National.DeviceDesc%=BTusb_DDI, USB\VID_0400&PID_0807
+%National.DeviceDesc%=BTusb_DDI, USB\VID_0400&PID_080A
+%RTX.DeviceDesc%=BTusb_DDI, USB\VID_0D9A&PID_0001
+%BROADCOM.DeviceDesc%=Btusb_DDI, USB\VID_0A5C&PID_201D
+%BROADCOM.DeviceDesc%=Btusb_DDI, USB\VID_0A5C&PID_2039
+%SILICONWAVE.DeviceDesc%=Btusb_DDI, USB\VID_0525&PID_A220
+%SILICONWAVE.DeviceDesc%=Btusb_DDI, USB\VID_0525&PID_100D
+%SILICONWAVE.DeviceDesc%=Btusb_DDI, USB\VID_0c10&PID_0000
+%SILICONWAVE.DeviceDesc%=Btusb_DDI, USB\VID_1582&PID_3001
+%ZEEVO.DeviceDesc%=Btusb_DDI, USB\VID_0B7A&PID_07D0
+%SUPERBT.DeviceDesc%=Btusb_DDI, USB\VID_0BDB&PID_1000
+%SUPERBT.DeviceDesc%=Btusb_DDI, USB\VID_0BDB&PID_1002
+%AVNET.DeviceDesc%=Btusb_DDI, USB\VID_0471&PID_0809
+%TAIYOYUDEN.DeviceDesc%=Btusb_DDI, USB\VID_0547&PID_7777
+%WavePlus.DeviceDesc%=Btusb_DDI, USB\VID_0F57&PID_1002
+%WLink.DeviceDesc%=Btusb_DDI, USB\VID_0A5C&PID_200A
+%Mitsumi.DeviceDesc%=Btusb_DDI, USB\VID_03EE&PID_641F
+%Mitsumi.DeviceDesc%=Btusb_DDI, USB\VID_03EE&PID_6438
+%Oki.DeviceDesc%=Btusb_DDI, USB\VID_04D7&PID_1BE4
+%Oki.DeviceDesc%=Btusb_DDI, USB\VID_070A&PID_4002
+%Oki.DeviceDesc%=Btusb_DDI, USB\VID_070A&PID_4003
+%SAMSUNG.DeviceDesc%=Btusb_DDI, USB\VID_055D&PID_0BB1
+%TI.DeviceDesc%=Btusb_DDI, USB\VID_0451&PID_1234
+%TI.DeviceDesc%=Btusb_DDI, USB\VID_0451&PID_ffff
+%SmartModular.DeviceDesc%=BTusb_DDI, USB\VID_0E39&PID_0137
+%Unknown.DeviceDesc%=BTusb_DDI, USB\VID_08fd&PID_0001
+%Unknown.DeviceDesc%=BTusb_DDI, USB\VID_0930&PID_0502
+%ST.DeviceDesc%=BTusb_DDI, USB\VID_0483&PID_5000
+;%ST.DeviceDesc%=BTusb_DDI, USB\VID_0483&PID_5001  ; this is ST HID dongle, it will switch to USB\VID_0483&PID_5000 in HCI mode
+%IBM.DeviceDesc%=BTusb_DDI, USB\VID_04BF&PID_030A
+%IBM.DeviceDesc%=BTusb_DDI, USB\VID_04BF&PID_030C
+%IBM.DeviceDesc%=BTusb_DDI, USB\VID_04BF&PID_0310
+%IBM.DeviceDesc%=BTusb_DDI, USB\VID_04BF&PID_0311
+%IBM.DeviceDesc%=BTusb_DDI, USB\VID_04BF&PID_0317
+%IBM.DeviceDesc%=BTusb_DDI, USB\VID_04BF&PID_0318
+%IBM.DeviceDesc%=BTusb_DDI, USB\VID_1668&PID_0441
+%IBM.DeviceDesc%=BTusb_DDI, USB\VID_1668&PID_1441
+%IBM.DeviceDesc%=BTusb_DDI, USB\VID_1668&PID_2441
+%MicroSoft.DeviceDesc%=BTusb_DDI, USB\VID_045E&PID_007E
+%TDK.DeviceDesc%=BTusb_DDI, USB\VID_04BF&PID_0309
+%TDK.DeviceDesc%=BTusb_DDI, USB\VID_04BF&PID_0319
+%TDK.DeviceDesc%=BTusb_DDI, USB\VID_04BF&PID_0320
+%TDK.DeviceDesc%=BTusb_DDI, USB\VID_04BF&PID_030B
+%3COM.DeviceDesc%=BTusb_DDI, USB\VID_0506&PID_00A0
+%BILLIONTON.DeviceDesc%=BTusb_DDI, USB\VID_0B62&PID_000B
+%SMK.DeviceDesc%=BTusb_DDI, USB\VID_0609&PID_FF12
+%Microtune.DeviceDesc%=BTusb_DDI, USB\VID_0F4D&PID_1000
+%Arima.DeviceDesc%=BTusb_DDI, USB\VID_0471&PID_1201
+%Hitachi.DeviceDesc%=BTusb_DDI, USB\VID_0858&PID_3102
+%GctSemi.DeviceDesc%=BTusb_DDI, USB\VID_1076&PID_0031
+%GctSemi.DeviceDesc%=BTusb_DDI, USB\VID_1076&PID_0032
+%DELL.DeviceDesc%=BTusb_DDI, USB\VID_413C&PID_8000
+%DELL.DeviceDesc%=BTusb_DDI, USB\VID_413C&PID_8010
+%COMPAQ.DeviceDesc%=BTusb_DDI, USB\VID_049F&PID_0027 
+%COMPAQ.DeviceDesc%=BTusb_DDI, USB\VID_049F&PID_0036
+%MSI.DeviceDesc%=BTusb_DDI, USB\VID_0DB0&PID_1967 
+%MSI.DeviceDesc%=BTusb_DDI, USB\VID_0DB0&PID_ffff 
+%MSI.DeviceDesc%=BTusb_DDI, USB\VID_0DB0&PID_6855 
+%MSI.DeviceDesc%=BTusb_DDI, USB\VID_0DB0&PID_6970
+%MSIEDR.DeviceDesc%=BTusb_DDI, USB\VID_0DB0&PID_A970
+%MSIEDR.DeviceDesc%=BTusb_DDI, USB\VID_0DB0&PID_A97A
+%MANFEDR.DeviceDesc%=BTusb_DDI, USB\VID_0DB0&PID_B970
+%MANFEDR.DeviceDesc%=BTusb_DDI, USB\VID_0DB0&PID_B97A 
+%BT.DeviceDesc%=BTusb_DDI, USB\VID_0DB0&PID_697A 
+%SONY.DeviceDesc%=BTusb_DDI, USB\VID_044e&PID_2014
+%Winbond.DeviceDesc%=BTusb_DDI, USB\VID_1046&PID_8901
+%ISSC.DeviceDesc%=BTusb_DDI, USB\VID_1131&PID_1001
+%ISSC.DeviceDesc%=BTusb_DDI, USB\VID_1131&PID_1003
+%Belkin.DeviceDesc%=BTusb_DDI, USB\VID_050D&PID_0081
+%Belkin.DeviceDesc%=BTusb_DDI, USB\VID_050d&PID_0084
+%Air2U.DeviceDesc%=BTusb_DDI, USB\VID_1310&PID_0001
+%HP.DeviceDesc%=BTusb_DDI, USB\VID_049F&PID_0086
+%iTech.DeviceDesc%=BTusb_DDI, USB\VID_13DD&PID_0001
+%SocketCom.DeviceDesc%=BTusb_DDI, USB\VID_2299&PID_4533
+%Cellink.DeviceDesc%=BTusb_DDI, USB\VID_1733&PID_1000
+%BlueExpert.DeviceDesc%=BTusb_DDI, USB\VID_083A&PID_BB01
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+%LOGITECH.DeviceDesc%=BTusb_DDI,  USB\VID_046D&PID_C707
+%LOGITECH.DeviceDesc%=BTusb_DDI,  USB\VID_046D&PID_C708
+%LOGITECH.DeviceDesc%=BTusb_DDI,  USB\VID_046D&PID_C709
+%IBMBM3.DeviceDesc%=BTusb_DDI,    USB\VID_1668&PID_2441
+%GIANT.DeviceDesc%=BTusb_DDI,    USB\VID_0FD1&PID_0001
+%Belkin.DeviceDesc%=BTusb_DDI,    USB\VID_050D&PID_0083
+%PANASONIC.DeviceDesc%=BTusb_DDI,	USB\VID_04AD&PID_2501
+%ICSI.DeviceDesc%=BTusb_DDI,      USB\VID_0547&PID_0001
+%ITRONIX.DeviceDesc%=BTusb_DDI,	USB\VID_11D9&PID_2600
+%DELLELWOOD.DeviceDesc%=BTusb_DDI,	USB\VID_413C&PID_8501
+%FCS.DeviceDesc%=BTusb_DDI, 	USB\VID_0BF8&PID_1003
+%AboCom.DeviceDesc%=BTusb_DDI, USB\VID_07B8&PID_B02A
+%Princeton.DeviceDesc%=BTusb_DDI, USB\VID_117F&PID_3101
+%FIC.DeviceDesc%=BTusb_DDI, USB\VID_1457&PID_5202
+%GlobalSat.DeviceDesc%=BTusb_DDI, USB\VID_5994&PID_2005
+
+[Btusb_DDI]
+AddReg=Btusb_9X_AddReg
+CopyFiles=Btusb_Files_Driver
+
+[Btusb_9X_AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,btcusb.sys
+
+[Btusb_DDI.NT]
+CopyFiles=Btusb_Files_Driver
+
+[Btusb_DDI.NT.Services]
+Addservice = Btcsrusb, 0x00000002, Btusb_AddService
+
+[Btusb_AddService]
+DisplayName    = %SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\btcusb.sys
+
+[Btusb_Files_Driver]
+;btcusb.sys
+
+[DestinationDirs]
+DefaultDestDir     = 11
+Btusb_Files_Driver = 10,System32\Drivers
+
+
+;--------- Strings Section ---------------------------------------------------
+[Strings]
+IVT="IVT Corporation"
+ProviderName="IVT Corporation"
+BTUSBClassName="Bluetooth USB"
+SvcDesc="Bluetooth USB For Bluetooth Service"
+SourceDisk="BlueSoleil Installation Disk"
+
+CSR.DeviceDesc="CSR Bluetooth Device"
+AVNET.DeviceDesc="AVNET Bluetooth Device"
+ALPS.DeviceDesc="ALPS Bluetooth Device"
+ERICSSON.DeviceDesc="ERICSSON Bluetooth Device"
+NATIONAL.DeviceDesc="NSC Bluetooth Device"
+SILICONWAVE.DeviceDesc="RFMD Bluetooth Device"
+ZEEVO.DeviceDesc="Zeevo Bluetooth Device"
+SUPERBT.DeviceDesc="SUPERBT Bluetooth Device"
+WavePlus.DeviceDesc="WavePlus Bluetooth Device"
+TAIYOYUDEN.DeviceDesc="TAIYO YUDEN Bluetooth Device"
+BROADCOM.DeviceDesc="BROADCOM Bluetooth Device"
+WLink.DeviceDesc="WLink Bluetooth Device"
+Mitsumi.DeviceDesc="Mitsumi Bluetooth Device"
+Oki.DeviceDesc="OKI Bluetooth Device"
+SAMSUNG.DeviceDesc="SAMSUNG Bluetooth Device"
+TI.DeviceDesc="TI Bluetooth Device"
+RTX.DeviceDesc="RTX Bluetooth Device"
+Unknown.DeviceDesc="Bluetooth Device"
+ST.DeviceDesc="ST Micro Bluetooth Device"
+IBM.DeviceDesc="IBM Bluetooth Device"
+MicroSoft.DeviceDesc="MicroSoft Bluetooth Device"
+TDK.DeviceDesc="TDK Bluetooth Device"
+3COM.DeviceDesc="3COM Bluetooth Device"
+BILLIONTON.DeviceDesc="BILLIONTON Bluetooth Device"
+SMK.DeviceDesc="SMK Bluetooth Device"
+Microtune.DeviceDesc="Microtune Bluetooth Device"
+Arima.DeviceDesc="Arima Bluetooth Device"
+Hitachi.DeviceDesc="Hitachi Bluetooth Device"
+GctSemi.DeviceDesc="GctSemi Bluetooth Device"
+DELL.DeviceDesc="DELL Bluetooth Device"
+COMPAQ.DeviceDesc="COMPAQ Bluetooth Device"
+MSI.DeviceDesc="MSI Bluetooth Device"
+BT.DeviceDesc="USB Bluetooth Device"
+SONY.DeviceDesc="SONY Bluetooth Device"
+Air2U.DeviceDesc="INVES Bluetooth Device"
+HP.DeviceDesc="HP Bluetooth Device"
+iTech.DeviceDesc="i.Tech Dynamic Bluetooth Device"
+Winbond.DeviceDesc="Winbond Bluetooth Device"
+ISSC.DeviceDesc="ISSC Bluetooth Device"
+SmartModular.DeviceDesc="SmartModular Bluetooth Device"
+Belkin.DeviceDesc="Belkin Bluetooth Device"
+SocketCom.DeviceDesc="Socketcom Bluetooth Device"
+Cellink.DeviceDesc="Cellink Bluetooth Device"
+BlueExpert.DeviceDesc="BlueExpert Bluetooth Device"
+
+LOGITECH.DeviceDesc="Bluetooth wireless hub"
+IBMBM3.DeviceDesc="IBM Integrated Bluetooth Device"
+GIANT.DeviceDesc="GIANT Bluetooth Device"
+PANASONIC.DeviceDesc="Panasonic Bluetooth Device"
+ICSI.DeviceDesc="ICSI Bluetooth Device"
+ITRONIX.DeviceDesc="Itronix Bluetooth Device"
+DELLELWOOD.DeviceDesc="Dell Bluetooth/SD Reader USB Adapter"
+FCS.DeviceDesc="Fujitsu Siemens Bluetooth Device"
+AboCom.DeviceDesc="AboCom Bluetooth Device"
+Princeton.DeviceDesc="Princeton USB BT Adapter"
+FIC.DeviceDesc="FIC Bluetooth USB Device"
+MSIEDR.DeviceDesc="MSI Bluetooth EDR Device"
+MANFEDR.DeviceDesc="USB Bluetooth EDR Device"
+GlobalSat.DeviceDesc="GlobalSat Bluetooth Device"
